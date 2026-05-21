@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gerador de Senhas</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- JS -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="card">
+
+      <h1>Gerador de Senhas</h1>
+
+      <div class="password-box">
+        <input
+          type="text"
+          id="password"
+          placeholder="Sua senha aparecerá aqui"
+          readonly
+        />
+
+        <button id="copyBtn">
+          Copiar
+        </button>
+      </div>
+
+      <div class="settings">
+
+        <div class="setting">
+          <label for="length">
+            Tamanho:
+          </label>
+
+          <span id="lengthValue">12</span>
+        </div>
+
+        <input
+          type="range"
+          id="length"
+          min="4"
+          max="40"
+          value="12"
+        />
+
+        <div class="checkbox-group">
+
+          <label>
+            <input type="checkbox" id="uppercase" checked />
+            Letras Maiúsculas
+          </label>
+
+          <label>
+            <input type="checkbox" id="lowercase" checked />
+            Letras Minúsculas
+          </label>
+
+          <label>
+            <input type="checkbox" id="numbers" checked />
+            Números
+          </label>
+
+          <label>
+            <input type="checkbox" id="symbols" checked />
+            Símbolos
+          </label>
+
+        </div>
+
+      </div>
+
+      <button id="generateBtn" class="generate-btn">
+        Gerar Senha
+      </button>
+
+      <div class="strength">
+        <p>Força da senha:</p>
+
+        <div class="strength-bar">
+          <div id="strengthFill"></div>
+        </div>
+
+        <span id="strengthText">Média</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
